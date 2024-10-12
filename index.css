@@ -4,6 +4,10 @@
     src: url("./asen-pro-font-family/AsenPro-Bold-iF660fc492df681.otf");
 
 }
+@font-face {
+    font-family: mobileFont;
+    src: url("./asen-pro-font-family/AsenPro-Light-iF660fc493058bf.otf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -209,6 +213,9 @@ tbody tr:nth-child(4n + 4) {
 .page_numbers_wrapper :nth-child(3) {
   padding-inline: 9px;
 }
+.prev_text, .next_text{
+    display: none;
+  }
 @media (max-width:1097px) {
     .main_wrapper {
         padding-inline: 30px 30px;
@@ -232,7 +239,6 @@ tbody tr:nth-child(4n + 4) {
      
       th,
       td {
-        
         text-align: center;
         vertical-align: middle; 
 
@@ -253,8 +259,44 @@ tbody tr:nth-child(4n + 4) {
         width: 100%;
         max-width: 100%;
       }
+     
+      .create_btn :nth-child(2){
+        display: none;
+      }
+      .create_btn{
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        
+      }
+      .pages{
+        display: none;
+      }
+      .page_numbers_wrapper{
+        display: none;
+      }
+      .pagenation_btns_wrapper{
+        justify-content: space-between !important;
+        display: flex;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .prev_icon, .next_icon{
+        display: none;
+      }
+    .prev_text, .next_text{
+        text-transform: capitalize;
+
+    }
+    .prev_text, .next_text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 }
 @media (max-width:499px) {
+    
     .main_wrapper{
         padding-inline: 16px;
     }
@@ -267,5 +309,26 @@ tbody tr:nth-child(4n + 4) {
       }
       .pages{
         width: 100%;
+      }
+      .form_section_wrapper h3 {
+        font-size: 16px;
+      }
+     
+      th,
+      td {
+        border-collapse: collapse;
+        font-family: mobileFont, sans-serif;
+        font-size: 10px;
+        font-weight: 300;
+
+       
+      }
+      th {
+        font-size: 10px;
+        font-weight: 100;
+      }
+      
+      tbody tr td:nth-child(6) :nth-child(2){
+        display: none;
       }
 }
